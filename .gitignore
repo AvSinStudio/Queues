@@ -4,6 +4,7 @@ capybara-*.html
 /log
 /tmp
 /db/*.sqlite3
+/bin
 /db/*.sqlite3-journal
 /public/system
 /coverage/
@@ -41,3 +42,4 @@ bower.json
 .byebug_history
 
 /.idea
+.DS_Store
