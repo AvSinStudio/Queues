@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Создать новую очередь</h1>
+  <%= form_for :event, url: events_path do |f| %>
+      <div class="form-group">
+        <%= f.label :'Название события' %><br>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :'Описание события' %><br>
+        <%= f.text_area :text, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :'Дата начала' %><br>
+        <%= f.date_field :date, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :'Время начала' %><br>
+        <%= f.time_field :time, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :'Время начала' %><br>
+        <%= f.text_field :group, class: 'form-control' %>
+      </div>
+
+
+      <p>
+        <%= f.submit class:'btn btn-primary' %>
+      </p>
+  <% end %>
+</div>

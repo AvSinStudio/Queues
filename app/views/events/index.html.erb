@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Запланированные события</h1>
+  <div class="panel panel-default">
+    <table class="table">
+      <tr>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Время</th>
+        <th>Tag</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% @events.each do |event| %>
+          <tr>
+            <td><%= event.title %></td>
+            <td><%= event.text %></td>
+            <td><%= event.time %></td>
+            <td><%= event.tag %></td>
+            <td><%= link_to 'Показать', event_path(event) %></td>
+            <td><%= link_to 'Удолить', event_path(event),
+                            method: :delete,
+                            data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+  <a href="events/new" class="btn btn-primary" role="button">Создать новую очередь</a>
+</div>
