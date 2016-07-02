@@ -10,8 +10,16 @@
         <%= f.text_area :text, class: 'form-control' %>
       </div>
       <div class="form-group">
+        <%= f.label :'Дата начала' %><br>
+        <%= f.date_field :date, class: 'form-control' %>
+      </div>
+      <div class="form-group">
         <%= f.label :'Время начала' %><br>
-        <%= f.text_field :time, class: 'form-control' %>
+        <%= f.time_field :time, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :'Время начала' %><br>
+        <%= f.text_field :group, class: 'form-control' %>
       </div>
 
 
